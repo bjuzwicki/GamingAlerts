@@ -1,0 +1,39 @@
+﻿<Application x:Class="GamingAlerts.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GamingAlerts"
+             xmlns:viewModel="clr-namespace:GamingAlerts.MVVM.ViewModels"
+             xmlns:view="clr-namespace:GamingAlerts.MVVM.Views"
+             xmlns:converters="clr-namespace:GamingAlerts.Converters" xmlns:System="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             ShutdownMode="OnExplicitShutdown"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/MenuButtonTheme.xaml" />
+                <ResourceDictionary Source="Themes/AddButtonTheme.xaml" />
+                <ResourceDictionary Source="Themes/NotifyIconResources.xaml" />
+                <ResourceDictionary Source="Themes/HoverButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewModel:AllAlertsViewModel}">
+                <view:AlertsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:FavoriteAlertsViewModel}">
+                <view:AlertsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ActiveAlertsViewModel}">
+                <view:AlertsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AddNewAlertViewModel}">
+                <view:AlertDetailsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:EditAlertViewModel}">
+                <view:AlertDetailsView/>
+            </DataTemplate>
+
+            <converters:IsFavoriteToImageConverter x:Key="IsFavoriteToImageConverter"/>
+            <converters:IsRepeatableToImageConverter x:Key="IsRepeatableToImageConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

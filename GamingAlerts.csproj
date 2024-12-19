@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <StartupObject></StartupObject>
+    <UseWindowsForms>False</UseWindowsForms>
+    <ApplicationIcon>Resources\alert_2.ico</ApplicationIcon>
+    <Title>GamingAlerts</Title>
+    <Company>$(Authors)</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\alert_2.ico" />
+    <None Remove="Resources\delete.png" />
+    <None Remove="Resources\edit.png" />
+    <None Remove="Resources\gaming_alerts_logo.png" />
+    <None Remove="Resources\minimize.png" />
+    <None Remove="Resources\repeat1.png" />
+    <None Remove="Resources\repeat2.png" />
+    <None Remove="Resources\star1.png" />
+    <None Remove="Resources\star2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\alert_2.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\alert.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\gaming_alerts_logo.png" />
+    <Resource Include="Resources\edit.png" />
+    <Resource Include="Resources\minimize.png" />
+    <Resource Include="Resources\repeat1.png" />
+    <Resource Include="Resources\repeat2.png" />
+    <Resource Include="Resources\star1.png" />
+    <Resource Include="Resources\star2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.1" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+
+</Project>

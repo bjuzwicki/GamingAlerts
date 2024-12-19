@@ -1,0 +1,2 @@
+# GamingAlerts
+ .NET WPF application that allows users to define custom alerts for in-game events, such as boss fights or important milestones. With Gaming Alerts, players can set personalized notifications to stay on top of crucial moments in their games, ensuring they never miss a key event. The app features an intuitive interface and customizable alert settings, making it easy to manage and receive timely reminders for your favorite in-game activities.
